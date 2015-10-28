@@ -82,6 +82,21 @@ console.log("User answered Q4 with: " + fear);
     alert("Invalid answer, " + name + ", no points.");
   }
 
+var toeNumber = prompt("How many toes do I have?");
+console.log("User answered Q6 with: " + toeNumber);
+var toeResponse = parseInt(toeNumber);
+
+  if (toeResponse === 10) {
+    alert("Correct! At this point in life I have 10 toes.");
+    answers++;
+  } else if (toeResponse >= 10) {
+    alert("Nope, just 10.");
+  } else if (toeResponse <= 10) {
+    alert("Maybe someday, but so far I still have 10.");
+  } else {
+    alert("I'm not sure that's a number, " + name + ", no points.");
+  }
+
 
   if (answers === 1) {
     alert("You only got one right!");
@@ -92,6 +107,8 @@ console.log("User answered Q4 with: " + fear);
   } else if (answers === 4) {
     alert("You got four right!");
   } else if (answers === 5) {
+    alert("You got five right!");
+  } else if (answers === 6) {
     alert("You got them all right!");
   } else {
     alert("Terrible job " + name + ", you got them all wrong.");
