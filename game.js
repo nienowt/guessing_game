@@ -55,7 +55,7 @@ console.log("User answered Q3 with: " + food);
     alert("Invlaid answer, " + name + ", no points.");
   }
 
-var favNumber = prompt("Final question, what is my favorite number between 1 and 30?");
+var favNumber = prompt("What is my favorite number between 1 and 30?");
 console.log("User answered Q3 with: " + favNumber);
 var number = parseInt(favNumber);
 
@@ -70,6 +70,19 @@ var number = parseInt(favNumber);
     alert("I'm not sure that's a number between 1 and 30...");
   }
 
+var fear = prompt("Am I terrified of birds? 'Yes' or 'No'").toUpperCase();
+console.log("User answered Q4 with: " + fear);
+
+  if ((fear === "YES") || (fear === "Y") || (fear === "YEA")) {
+    alert("Incorrect! Birds fear me, generally.");
+  } else if ((fear === "NO") || (fear === "N")) {
+    alert("Correct! Despite their improbable legs, birds inspire no fear in me.");
+    answers++;
+  } else {
+    alert("Invalid answer, " + name + ", no points.");
+  }
+
+
   if (answers === 1) {
     alert("You only got one right!");
   } else if (answers === 2) {
@@ -77,6 +90,8 @@ var number = parseInt(favNumber);
   } else if (answers === 3) {
     alert("You got three right!");
   } else if (answers === 4) {
+    alert("You got four right!");
+  } else if (answers === 5) {
     alert("You got them all right!");
   } else {
     alert("Terrible job " + name + ", you got them all wrong.");
