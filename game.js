@@ -17,8 +17,9 @@ var game = prompt("Alright, " + name + " wanna play a game? 'Yes' or 'No'").toUp
     alert("I'll take that as a yes!");
   }
 
-var home = prompt("Did I grow up in the northwest? 'Yes' or 'No'").toUpperCase();
-console.log("User answered Q1 with:" + home);
+function home () {
+  var home = prompt("Did I grow up in the northwest? 'Yes' or 'No'").toUpperCase();
+  console.log("User answered Q1 with:" + home);
 
   if ((home === "YES") || (home === "YEA") || (home === "Y")) {
     alert("Correct!");
@@ -28,9 +29,11 @@ console.log("User answered Q1 with:" + home);
   } else {
     alert("Invalid answer");
   }
+}
 
-var color = prompt("Alright, " + name + " what is my favorite primary color?").toUpperCase();
-console.log("User answered Q2 with:" + color);
+function color () {
+  var color = prompt("Alright, " + name + " what is my favorite primary color?").toUpperCase();
+  console.log("User answered Q2 with:" + color);
 
   if (color === "RED") {
     alert("Wrong, terrible.");
@@ -42,9 +45,11 @@ console.log("User answered Q2 with:" + color);
   } else {
     alert("I'm not sure that's a primary color, " + name + ".");
   }
+}
 
-var food = prompt("Alright, " + name + ", do I like ethopian food? 'Yes' or 'No'").toUpperCase();
-console.log("User answered Q3 with: " + food);
+function food () {
+  var food = prompt("Alright, " + name + ", do I like ethopian food? 'Yes' or 'No'").toUpperCase();
+  console.log("User answered Q3 with: " + food);
 
   if ((food === "YES") || (food === "YEA") || (food === "Y")) {
     alert("Correct.");
@@ -54,24 +59,27 @@ console.log("User answered Q3 with: " + food);
   } else {
     alert("Invlaid answer, " + name + ", no points.");
   }
+}
 
-var favNumber = prompt("What is my favorite number between 1 and 30?");
-console.log("User answered Q3 with: " + favNumber);
-var number = parseInt(favNumber);
+function favNumber () {
+  var favNumber = parseInt(prompt("What is my favorite number between 1 and 30?"));
+  console.log("User answered Q3 with: " + favNumber);
 
-  if (number === 15) {
+  if (favNumber === 15) {
     alert("Correct!");
     answers++;
-  } else if ((number > 15) && (number < 30)) {
+  } else if ((favNumber > 15) && (favNumber < 30)) {
     alert("Ah, no you're a little high.");
-  } else if (number < 15) {
+  } else if (favNumber < 15) {
     alert("Sorry, that's a little low.");
   } else {
     alert("I'm not sure that's a number between 1 and 30...");
   }
+}
 
-var fear = prompt("Am I terrified of birds? 'Yes' or 'No'").toUpperCase();
-console.log("User answered Q4 with: " + fear);
+function fear () {
+  var fear = prompt("Am I terrified of birds? 'Yes' or 'No'").toUpperCase();
+  console.log("User answered Q4 with: " + fear);
 
   if ((fear === "YES") || (fear === "Y") || (fear === "YEA")) {
     alert("Incorrect! Birds fear me, generally.");
@@ -81,22 +89,30 @@ console.log("User answered Q4 with: " + fear);
   } else {
     alert("Invalid answer, " + name + ", no points.");
   }
+}
 
-var toeNumber = prompt("How many toes do I have?");
-console.log("User answered Q6 with: " + toeNumber);
-var toeResponse = parseInt(toeNumber);
+function toeNumber () {
+  var toeNumber = parseInt(prompt("How many toes do I have?"));
+  console.log("User answered Q6 with: " + toeNumber);
 
-  if (toeResponse === 10) {
+  if (toeNumber === 10) {
     alert("Correct! At this point in life I have 10 toes.");
     answers++;
-  } else if (toeResponse >= 10) {
+  } else if (toeNumber >= 10) {
     alert("Nope, just 10.");
-  } else if (toeResponse <= 10) {
+  } else if (toeNumber <= 10) {
     alert("Maybe someday, but so far I still have 10.");
   } else {
     alert("I'm not sure that's a number, " + name + ", no points.");
   }
+}
 
+home();
+color();
+food();
+favNumber();
+fear();
+toeNumber();
 
   if (answers === 1) {
     alert("You only got one right!");
