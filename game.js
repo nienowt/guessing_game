@@ -6,6 +6,14 @@ console.log("User is from: " + from);
 alert("Oh! My best friend grew up in " + from + ", " +  "I wonder if you've ever met them.");
 var answers = 0;
 
+var ans1 = document.getElementById('answer1');
+var ans2 = document.getElementById('answer2');
+var ans3 = document.getElementById('answer3');
+var ans4 = document.getElementById('answer4');
+var ans5 = document.getElementById('answer5');
+var ans6 = document.getElementById('answer6');
+var results = document.getElementById('results');
+
 
 var game = prompt("Alright, " + name + " wanna play a game? 'Yes' or 'No'").toUpperCase();
 
@@ -17,101 +25,120 @@ var game = prompt("Alright, " + name + " wanna play a game? 'Yes' or 'No'").toUp
     alert("I'll take that as a yes!");
   }
 
-var home = prompt("Did I grow up in the northwest? 'Yes' or 'No'").toUpperCase();
-console.log("User answered Q1 with:" + home);
+function home () {
+  var home = prompt("Did I grow up in the northwest? 'Yes' or 'No'").toUpperCase();
+  console.log("User answered Q1 with:" + home);
 
   if ((home === "YES") || (home === "YEA") || (home === "Y")) {
-    alert("Correct!");
+    ans1.innerHTML = "Correct!";
     answers++;
   } else if ((home === "NO") || (home === "N")) {
-    alert("Oh, that is incorrect.");
+    ans1.innerHTML = "Oh, that is incorrect.";
   } else {
-    alert("Invalid answer");
+    ans1.innerHTML = "Invalid answer";
   }
+}
 
-var color = prompt("Alright, " + name + " what is my favorite primary color?").toUpperCase();
-console.log("User answered Q2 with:" + color);
+function color () {
+  var color = prompt("Alright, " + name + " what is my favorite primary color?").toUpperCase();
+  console.log("User answered Q2 with:" + color);
 
   if (color === "RED") {
-    alert("Wrong, terrible.");
+    ans2.innerHTML = "Wrong, terrible.";
   } else if (color === "YELLOW") {
-    alert("Oh, no...it is not yellow");
+    ans2.innerHTML = "Oh, no...it is not yellow";
   } else  if (color === "BLUE") {
-    alert("Yep, I guess it's blue.")
+    ans2.innerHTML = "Yep, I guess it's blue."
     answers++;
   } else {
-    alert("I'm not sure that's a primary color, " + name + ".");
+    ans2.innerHTML = "I'm not sure that's a primary color, " + name + ".";
   }
+}
 
-var food = prompt("Alright, " + name + ", do I like ethopian food? 'Yes' or 'No'").toUpperCase();
-console.log("User answered Q3 with: " + food);
+function food () {
+  var food = prompt("Alright, " + name + ", do I like ethopian food? 'Yes' or 'No'").toUpperCase();
+  console.log("User answered Q3 with: " + food);
 
   if ((food === "YES") || (food === "YEA") || (food === "Y")) {
-    alert("Correct.");
+    ans3.innerHTML = "Correct.";
     answers++;
   } else if ((food === "No") || (food === "N")) {
-    alert("Incorrect!");
+    ans3.innerHTML = "Incorrect!";
   } else {
-    alert("Invlaid answer, " + name + ", no points.");
+    ans3.innerHTML = "Invalid answer, " + name + ", no points.";
   }
+}
 
-var favNumber = prompt("What is my favorite number between 1 and 30?");
-console.log("User answered Q3 with: " + favNumber);
-var number = parseInt(favNumber);
+function favNumber () {
+  var favNumber = parseInt(prompt("What is my favorite number between 1 and 30?"));
+  console.log("User answered Q3 with: " + favNumber);
 
-  if (number === 15) {
-    alert("Correct!");
+  if (favNumber === 15) {
+    ans4.innerHTML = "Correct!";
     answers++;
-  } else if ((number > 15) && (number < 30)) {
-    alert("Ah, no you're a little high.");
-  } else if (number < 15) {
-    alert("Sorry, that's a little low.");
+  } else if ((favNumber > 15) && (favNumber < 30)) {
+    ans4.innerHTML = "Ah, no you're a little high.";
+  } else if (favNumber < 15) {
+    ans4.innerHTML = "Sorry, that's a little low.";
   } else {
-    alert("I'm not sure that's a number between 1 and 30...");
+    ans4.innerHTML = "I'm not sure that's a number between 1 and 30...";
   }
+}
 
-var fear = prompt("Am I terrified of birds? 'Yes' or 'No'").toUpperCase();
-console.log("User answered Q4 with: " + fear);
+function fear () {
+  var fear = prompt("Am I terrified of birds? 'Yes' or 'No'").toUpperCase();
+  console.log("User answered Q4 with: " + fear);
 
   if ((fear === "YES") || (fear === "Y") || (fear === "YEA")) {
-    alert("Incorrect! Birds fear me, generally.");
+    ans5.innerHTML = "Incorrect! Birds fear me, generally.";
   } else if ((fear === "NO") || (fear === "N")) {
-    alert("Correct! Despite their improbable legs, birds inspire no fear in me.");
+    ans5.innerHTML = "Correct! Despite their improbable legs, birds inspire no fear in me.";
     answers++;
   } else {
-    alert("Invalid answer, " + name + ", no points.");
+    ans5.innerHTML = "Invalid answer, " + name + ", no points.";
   }
+}
 
-var toeNumber = prompt("How many toes do I have?");
-console.log("User answered Q6 with: " + toeNumber);
-var toeResponse = parseInt(toeNumber);
+function toeNumber () {
+  var toeNumber = parseInt(prompt("How many toes do I have?"));
+  console.log("User answered Q6 with: " + toeNumber);
 
-  if (toeResponse === 10) {
-    alert("Correct! At this point in life I have 10 toes.");
+  if (toeNumber === 10) {
+    ans6.innerHTML = "Correct! At this point in life I have 10 toes.";
     answers++;
-  } else if (toeResponse >= 10) {
-    alert("Nope, just 10.");
-  } else if (toeResponse <= 10) {
-    alert("Maybe someday, but so far I still have 10.");
+  } else if (toeNumber >= 10) {
+    ans6.innerHTML = "Nope, just 10.";
+  } else if (toeNumber <= 10) {
+    ans6.innerHTML = "Maybe someday, but so far I still have 10.";
   } else {
-    alert("I'm not sure that's a number, " + name + ", no points.");
+    ans6.innerHTML = "I'm not sure that's a number, " + name + ", no points.";
   }
+}
 
-
+function feedback () {
   if (answers === 1) {
-    alert("You only got one right!");
+    results.innerHTML = "You only got one right!";
   } else if (answers === 2) {
-    alert("You got two right!");
+    results.innerHTML = "You got two right!";
   } else if (answers === 3) {
-    alert("You got three right!");
+    results.innerHTML = "You got three right!";
   } else if (answers === 4) {
-    alert("You got four right!");
+    results.innerHTML = "You got four right!";
   } else if (answers === 5) {
-    alert("You got five right!");
+    results.innerHTML = "You got five right!";
   } else if (answers === 6) {
-    alert("You got them all right!");
+    results.innerHTML = "You got them all right!";
   } else {
-    alert("Terrible job " + name + ", you got them all wrong.");
+    results.innerHTML = "Terrible job " + name + ", you got them all wrong.";
     var feel = prompt("How do you feel about your loss today?");
     console.log("User feels: " + feel);
   }
+}
+
+home();
+color();
+food();
+favNumber();
+fear();
+toeNumber();
+feedback();
