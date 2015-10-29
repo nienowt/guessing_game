@@ -1,6 +1,7 @@
 # guessing_game
 Guessing game built with HTML, CSS, JavaScript
 Originally written by Thom Nienow
+Driven by Dan Schwartz, navigated by Thom
 
 Description
 -----------
@@ -16,3 +17,8 @@ Q: What did the green grape say to the purple grape?
 
 
 A: "Breathe, you idiot!"
+
+
+Co-working
+----------
+Dan & Thom put all the questions into functions and added functionality to write answers to the HTML instead of alerts.
