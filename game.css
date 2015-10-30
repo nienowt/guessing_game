@@ -1,0 +1,10 @@
+.correct {
+  color: green;
+}
+.wrong {
+  color: red;
+}
+
+img {
+  width: 200px;
+}

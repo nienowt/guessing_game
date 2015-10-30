@@ -6,6 +6,7 @@ console.log("User is from: " + from);
 alert("Oh! My best friend grew up in " + from + ", " +  "I wonder if you've ever met them.");
 var answers = 0;
 
+
 var ans1 = document.getElementById('answer1');
 var ans2 = document.getElementById('answer2');
 var ans3 = document.getElementById('answer3');
@@ -30,12 +31,15 @@ function home () {
   console.log("User answered Q1 with:" + home);
 
   if ((home === "YES") || (home === "YEA") || (home === "Y")) {
-    ans1.innerHTML = "Correct!";
+    ans1.innerHTML = "Correct!" + "<img src='images/correct_response.jpg'>";
+    ans1.className = "correct";
     answers++;
   } else if ((home === "NO") || (home === "N")) {
     ans1.innerHTML = "Oh, that is incorrect.";
+    ans1.className = "wrong";
   } else {
     ans1.innerHTML = "Invalid answer";
+    ans1.className = "wrong";
   }
 }
 
@@ -45,10 +49,13 @@ function color () {
 
   if (color === "RED") {
     ans2.innerHTML = "Wrong, terrible.";
+    ans2.className = "wrong";
   } else if (color === "YELLOW") {
     ans2.innerHTML = "Oh, no...it is not yellow";
+    ans2.className = "wrong";
   } else  if (color === "BLUE") {
-    ans2.innerHTML = "Yep, I guess it's blue."
+    ans2.innerHTML = "Yep, I guess it's blue." + "<img src='images/color_correct_answer.jpg'>"
+    ans2.className = "correct";
     answers++;
   } else {
     ans2.innerHTML = "I'm not sure that's a primary color, " + name + ".";
@@ -60,12 +67,15 @@ function food () {
   console.log("User answered Q3 with: " + food);
 
   if ((food === "YES") || (food === "YEA") || (food === "Y")) {
-    ans3.innerHTML = "Correct.";
+    ans3.innerHTML = "Correct." + "<img src='images/food_correct.png'>";
+    ans3.className = "correct";
     answers++;
   } else if ((food === "No") || (food === "N")) {
     ans3.innerHTML = "Incorrect!";
+    ans3.className = "wrong";
   } else {
     ans3.innerHTML = "Invalid answer, " + name + ", no points.";
+    ans3.className = "wrong";
   }
 }
 
@@ -74,14 +84,17 @@ function favNumber () {
   console.log("User answered Q3 with: " + favNumber);
 
   if (favNumber === 15) {
-    ans4.innerHTML = "Correct!";
+    ans4.innerHTML = "Correct!" + "<img src='images/fav_number_correct.jpg'>";
+    ans4.className = "correct";
     answers++;
   } else if ((favNumber > 15) && (favNumber < 30)) {
     ans4.innerHTML = "Ah, no you're a little high.";
+    ans4.className = "wrong";
   } else if (favNumber < 15) {
     ans4.innerHTML = "Sorry, that's a little low.";
   } else {
     ans4.innerHTML = "I'm not sure that's a number between 1 and 30...";
+    ans4.className = "wrong";
   }
 }
 
@@ -91,11 +104,14 @@ function fear () {
 
   if ((fear === "YES") || (fear === "Y") || (fear === "YEA")) {
     ans5.innerHTML = "Incorrect! Birds fear me, generally.";
+    ans5.className = "wrong";
   } else if ((fear === "NO") || (fear === "N")) {
-    ans5.innerHTML = "Correct! Despite their improbable legs, birds inspire no fear in me.";
+    ans5.innerHTML = "Correct! Despite their improbable legs, birds inspire no fear in me." + "<img src='images/bird_correct.jpg'>";
+    ans5.className = "correct";
     answers++;
   } else {
     ans5.innerHTML = "Invalid answer, " + name + ", no points.";
+    ans5.className = "wrong";
   }
 }
 
@@ -104,14 +120,17 @@ function toeNumber () {
   console.log("User answered Q6 with: " + toeNumber);
 
   if (toeNumber === 10) {
-    ans6.innerHTML = "Correct! At this point in life I have 10 toes.";
+    ans6.innerHTML = "Correct! At this point in life I have 10 toes." + "<img src='images/toes.jpg'>";
+    ans6.className = "correct";
     answers++;
   } else if (toeNumber >= 10) {
     ans6.innerHTML = "Nope, just 10.";
+    ans6.className = "wrong";
   } else if (toeNumber <= 10) {
     ans6.innerHTML = "Maybe someday, but so far I still have 10.";
   } else {
     ans6.innerHTML = "I'm not sure that's a number, " + name + ", no points.";
+    ans6.className = "wrong";
   }
 }
 
@@ -136,9 +155,9 @@ function feedback () {
 }
 
 home();
-color();
-food();
-favNumber();
-fear();
-toeNumber();
-feedback();
+window.setTimeout(color, 1000);
+window.setTimeout(food, 1000);
+window.setTimeout(favNumber, 1000);
+window.setTimeout(fear, 1000);
+window.setTimeout(toeNumber, 1000);
+window.setTimeout(feedback, 1000);
