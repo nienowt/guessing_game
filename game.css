@@ -8,3 +8,11 @@
 img {
   width: 200px;
 }
+
+.main-container{
+  width: 1200px;
+  margin: auto auto;
+  background-color: #36365F;
+  color: #FF6666;
+  font-family: calibri;
+}
