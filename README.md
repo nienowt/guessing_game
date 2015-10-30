@@ -3,6 +3,11 @@ Guessing game built with HTML, CSS, JavaScript
 Originally written by Thom Nienow
 Driven by Dan Schwartz, navigated by Thom
 
+10-30-15 Peer programming:
+Driven by Melissa Giaime
+Navigated by Thom Nienow
+Backseat driver Brandon Parker
+
 Description
 -----------
 Runs a guessing game in which the user is prompted to answer a series of questions
