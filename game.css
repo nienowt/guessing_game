@@ -15,4 +15,9 @@ img {
   background-color: #36365F;
   color: #FF6666;
   font-family: calibri;
+  padding: 50px 50px
+}
+
+body{
+  background-color: black;
 }
