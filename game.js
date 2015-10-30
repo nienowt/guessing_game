@@ -30,7 +30,7 @@ function home () {
   console.log("User answered Q1 with:" + home);
 
   if ((home === "YES") || (home === "YEA") || (home === "Y")) {
-    ans1.innerHTML = "Correct!";
+    ans1.innerHTML = "Correct!" + "<img src='images/correct_response.jpg'>";
     answers++;
   } else if ((home === "NO") || (home === "N")) {
     ans1.innerHTML = "Oh, that is incorrect.";
@@ -48,7 +48,7 @@ function color () {
   } else if (color === "YELLOW") {
     ans2.innerHTML = "Oh, no...it is not yellow";
   } else  if (color === "BLUE") {
-    ans2.innerHTML = "Yep, I guess it's blue."
+    ans2.innerHTML = "Yep, I guess it's blue." + "<img src='images/color_correct_answer.jpg'>"
     answers++;
   } else {
     ans2.innerHTML = "I'm not sure that's a primary color, " + name + ".";
@@ -60,7 +60,7 @@ function food () {
   console.log("User answered Q3 with: " + food);
 
   if ((food === "YES") || (food === "YEA") || (food === "Y")) {
-    ans3.innerHTML = "Correct.";
+    ans3.innerHTML = "Correct." + "<img src='images/food_correct.png'>";
     answers++;
   } else if ((food === "No") || (food === "N")) {
     ans3.innerHTML = "Incorrect!";
@@ -74,7 +74,7 @@ function favNumber () {
   console.log("User answered Q3 with: " + favNumber);
 
   if (favNumber === 15) {
-    ans4.innerHTML = "Correct!";
+    ans4.innerHTML = "Correct!" + "<img src='images/fav_number_correct.jpg'>";
     answers++;
   } else if ((favNumber > 15) && (favNumber < 30)) {
     ans4.innerHTML = "Ah, no you're a little high.";
@@ -92,7 +92,7 @@ function fear () {
   if ((fear === "YES") || (fear === "Y") || (fear === "YEA")) {
     ans5.innerHTML = "Incorrect! Birds fear me, generally.";
   } else if ((fear === "NO") || (fear === "N")) {
-    ans5.innerHTML = "Correct! Despite their improbable legs, birds inspire no fear in me.";
+    ans5.innerHTML = "Correct! Despite their improbable legs, birds inspire no fear in me." + "<img src='images/bird_correct.jpg'>";
     answers++;
   } else {
     ans5.innerHTML = "Invalid answer, " + name + ", no points.";
@@ -104,7 +104,7 @@ function toeNumber () {
   console.log("User answered Q6 with: " + toeNumber);
 
   if (toeNumber === 10) {
-    ans6.innerHTML = "Correct! At this point in life I have 10 toes.";
+    ans6.innerHTML = "Correct! At this point in life I have 10 toes." + "<img src='images/toes.jpg'>";
     answers++;
   } else if (toeNumber >= 10) {
     ans6.innerHTML = "Nope, just 10.";
