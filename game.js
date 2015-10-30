@@ -1,4 +1,4 @@
-var name = prompt("What's your name?");
+https://github.com/nienowt/guessing_game-2.gitvar name = prompt("What's your name?");
 console.log("User identified as: " + name);
 alert("Hello " + name + "! " + "It's nice to meet you.");
 var from = prompt("Where are you from " + name + "?");
@@ -31,7 +31,7 @@ function home () {
   console.log("User answered Q1 with:" + home);
 
   if ((home === "YES") || (home === "YEA") || (home === "Y")) {
-    ans1.innerHTML = "Correct!" + "<img src='images/correct_response.jpg'>";
+    ans1.innerHTML = "Correct!" + "<br><img src='images/correct_response.jpg'>";
     ans1.className = "correct";
     answers++;
   } else if ((home === "NO") || (home === "N")) {
@@ -54,7 +54,7 @@ function color () {
     ans2.innerHTML = "Oh, no...it is not yellow";
     ans2.className = "wrong";
   } else  if (color === "BLUE") {
-    ans2.innerHTML = "Yep, I guess it's blue." + "<img src='images/color_correct_answer.jpg'>"
+    ans2.innerHTML = "Yep, I guess it's blue." + "<br><img src='images/color_correct_answer.jpg'>"
     ans2.className = "correct";
     answers++;
   } else {
@@ -67,7 +67,7 @@ function food () {
   console.log("User answered Q3 with: " + food);
 
   if ((food === "YES") || (food === "YEA") || (food === "Y")) {
-    ans3.innerHTML = "Correct." + "<img src='images/food_correct.png'>";
+    ans3.innerHTML = "Correct." + "<br><img src='images/food_correct.png'>";
     ans3.className = "correct";
     answers++;
   } else if ((food === "No") || (food === "N")) {
@@ -84,7 +84,7 @@ function favNumber () {
   console.log("User answered Q3 with: " + favNumber);
 
   if (favNumber === 15) {
-    ans4.innerHTML = "Correct!" + "<img src='images/fav_number_correct.jpg'>";
+    ans4.innerHTML = "Correct!" + "<br><img src='images/fav_number_correct.jpg'>";
     ans4.className = "correct";
     answers++;
   } else if ((favNumber > 15) && (favNumber < 30)) {
@@ -106,7 +106,7 @@ function fear () {
     ans5.innerHTML = "Incorrect! Birds fear me, generally.";
     ans5.className = "wrong";
   } else if ((fear === "NO") || (fear === "N")) {
-    ans5.innerHTML = "Correct! Despite their improbable legs, birds inspire no fear in me." + "<img src='images/bird_correct.jpg'>";
+    ans5.innerHTML = "Correct! Despite their improbable legs, birds inspire no fear in me." + "<br><img src='images/bird_correct.jpg'>";
     ans5.className = "correct";
     answers++;
   } else {
@@ -120,7 +120,7 @@ function toeNumber () {
   console.log("User answered Q6 with: " + toeNumber);
 
   if (toeNumber === 10) {
-    ans6.innerHTML = "Correct! At this point in life I have 10 toes." + "<img src='images/toes.jpg'>";
+    ans6.innerHTML = "Correct! At this point in life I have 10 toes." + "<br><img src='images/toes.jpg'>";
     ans6.className = "correct";
     answers++;
   } else if (toeNumber >= 10) {
