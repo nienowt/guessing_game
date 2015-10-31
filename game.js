@@ -1,4 +1,4 @@
-https://github.com/nienowt/guessing_game-2.gitvar name = prompt("What's your name?");
+name = prompt("What's your name?");
 console.log("User identified as: " + name);
 alert("Hello " + name + "! " + "It's nice to meet you.");
 var from = prompt("Where are you from " + name + "?");
