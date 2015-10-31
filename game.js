@@ -59,6 +59,7 @@ function color () {
     answers++;
   } else {
     ans2.innerHTML = "I'm not sure that's a primary color, " + name + ".";
+    ans6.className = "wrong"
   }
 }
 
@@ -92,6 +93,7 @@ function favNumber () {
     ans4.className = "wrong";
   } else if (favNumber < 15) {
     ans4.innerHTML = "Sorry, that's a little low.";
+    ans6.className = "wrong"
   } else {
     ans4.innerHTML = "I'm not sure that's a number between 1 and 30...";
     ans4.className = "wrong";
@@ -128,6 +130,7 @@ function toeNumber () {
     ans6.className = "wrong";
   } else if (toeNumber <= 10) {
     ans6.innerHTML = "Maybe someday, but so far I still have 10.";
+    ans6.className = "wrong"
   } else {
     ans6.innerHTML = "I'm not sure that's a number, " + name + ", no points.";
     ans6.className = "wrong";
